@@ -21,7 +21,7 @@ def word_count(text):
 
 def character_count(text):
     character_dict = {}
-    az_character_list_sorted = []
+    character_list_sorted = []
     lowered_text = text.lower()
 
     for char in lowered_text:
@@ -31,12 +31,9 @@ def character_count(text):
             character_dict[char] = 1
 
     for key,value in character_dict.items():
-        az_character_list_sorted.append({"char":key, "num":value})
+        character_list_sorted.append({"char":key, "num":value})
     
-    az_character_list_sorted.sort(reverse=True, key=sort_on)
-    return az_character_list_sorted
+    character_list_sorted.sort(reverse=True, key=sort_on)
+    return character_list_sorted
         
-
-
-
 main()
